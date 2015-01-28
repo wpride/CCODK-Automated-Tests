@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zip-features" default="zip" basedir=".">
+
+	<property name="folder-to-zip" value="features" />
+
+	<target name="clean">
+		<delete file="features.zip" />
+		<delete dir="features" />
+	</target>
+
+	<target name="zip">
+		<zip destfile="features.zip" basedir="${features}" excludes="dont*.*" />
+	</target>
+
+</project>
